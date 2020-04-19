@@ -31,7 +31,7 @@ function win(userChoice, computerChoice){
     setTimeout(()=>userChoice_div.classList.remove('green-glow'),500)
 }
 
-function lose(user, computer){
+function lose(userChoice, computerChoice){
     computerScore++;
     computerScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -42,9 +42,10 @@ function lose(user, computer){
     userChoice_div.classList.add('red-glow')
     setTimeout(()=>userChoice_div.classList.remove('red-glow'),500)
 }
-function draw(){
+function draw(userChoice, computerChoice){
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
+    const userChoice_div = document.getElementById(userChoice);
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord} . Drawww!!! 😋`;
     userChoice_div.classList.add('yellow-glow')
     setTimeout(()=>userChoice_div.classList.remove('yellow-glow'),500)
