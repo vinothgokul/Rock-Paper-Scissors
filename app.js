@@ -38,7 +38,7 @@ function lose(userChoice, computerChoice){
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallCompWord} beats ${convertToWord(userChoice)}${smallUserWord} . You Lose! 😢`;
+    result_p.innerHTML = `${convertToWord(computerChoice)}${smallCompWord} beats ${convertToWord(userChoice)}${smallUserWord} . You Lose! 😢`;
     userChoice_div.classList.add('red-glow')
     setTimeout(()=>userChoice_div.classList.remove('red-glow'),500)
 }
